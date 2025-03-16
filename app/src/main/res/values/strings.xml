@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">JST MCP Android</string>
+    <string name="data_input">Data Input</string>
+    <string name="and">AND</string>
+    <string name="or">OR</string>
+    <string name="xor">XOR</string>
+    <string name="nand">NAND</string>
+    <string name="nor">NOR</string>
+    <string name="not">NOT</string>
+    <string name="x1">X1</string>
+    <string name="x2">X2</string>
+    <string name="latih">Latih</string>
+    <string name="reset">Reset</string>
+    <string name="pelatihan_jst">Pelatihan JST</string>
+    <string name="flag">Flag</string>
+    <string name="bobot">Bobot</string>
+    <string name="hasil">Hasil</string>
+    <string name="mcculloch_pitt">McCulloch-Pitt</string>
+    <string name="threshold">Threshold</string>
+    <string name="_1">1</string>
 </resources>

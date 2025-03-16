@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient_background"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        tools:ignore="RedundantNamespace,ScrollViewSize">
     
         <TextView
             android:id="@+id/tv_jst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pelatihan JST"
+            android:text="@string/pelatihan_jst"
             android:textColor="@color/orange"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -27,7 +28,7 @@
             android:id="@+id/tv_mcp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="McCulloch-Pitt"
+            android:text="@string/mcculloch_pitt"
             android:textColor="@color/orange"
             android:textSize="32sp"
             android:textStyle="bold"
@@ -41,7 +42,7 @@
             android:id="@+id/tv_flag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Flag"
+            android:text="@string/flag"
             android:textColor="@color/orange"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -75,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textColor="@color/white"
-                    android:text="AND"
+                    android:text="@string/and"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     />
                 <com.google.android.material.button.MaterialButton
@@ -83,31 +84,31 @@
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
-                    android:text="OR"/>
+                    android:text="@string/or"/>
                 <com.google.android.material.button.MaterialButton
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
-                    android:text="XOR" />
+                    android:text="@string/xor" />
                 <com.google.android.material.button.MaterialButton
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
-                    android:text="NAND"/>
+                    android:text="@string/nand"/>
                 <com.google.android.material.button.MaterialButton
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
-                    android:text="NOR"/>
+                    android:text="@string/nor"/>
                 <com.google.android.material.button.MaterialButton
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
-                    android:text="NOT"/>
+                    android:text="@string/not"/>
             </com.google.android.material.button.MaterialButtonToggleGroup>
         </HorizontalScrollView>
 
@@ -115,7 +116,7 @@
             android:id="@+id/tv_bobot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bobot"
+            android:text="@string/bobot"
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="@color/orange"
@@ -131,7 +132,7 @@
             android:id="@+id/tv_threshold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Threshold"
+            android:text="@string/threshold"
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="@color/orange"
@@ -146,35 +147,37 @@
             android:id="@+id/et_bobot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minLines="1"
-            android:maxLines="2"
-            android:maxWidth="100dp"
-            android:textColor="@color/white"
-            android:textAlignment="center"
             android:background="@null"
+            android:maxWidth="100dp"
+            android:maxLines="2"
+            android:minLines="1"
             android:paddingTop="8dp"
             android:paddingBottom="3dp"
             android:text="X"
-            app:layout_constraintTop_toBottomOf="@id/tv_bobot"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tv_bobot"
             app:layout_constraintStart_toStartOf="@id/tv_bobot"
-            app:layout_constraintEnd_toEndOf="@id/tv_bobot"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_bobot"
+            tools:ignore="Autofill,DuplicateSpeakableTextCheck,HardcodedText,LabelFor,TextFields,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/et_threshold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minLines="1"
-            android:maxLines="2"
+            android:background="@null"
             android:maxWidth="100dp"
-            android:text="X"
+            android:maxLines="2"
+            android:minLines="1"
             android:paddingTop="8dp"
             android:paddingBottom="3dp"
-            android:textColor="@color/white"
-            android:background="@null"
+            android:text="X"
             android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@id/tv_threshold"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tv_threshold"
             app:layout_constraintStart_toStartOf="@id/tv_threshold"
-            app:layout_constraintEnd_toEndOf="@id/tv_threshold"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_threshold"
+            tools:ignore="Autofill,HardcodedText,LabelFor,TextFields,TouchTargetSizeCheck" />
         
         <View
             android:id="@+id/lineBobot"
@@ -192,5 +195,295 @@
             app:layout_constraintEnd_toEndOf="@id/et_threshold"
             android:background="@color/orange"
             app:layout_constraintTop_toBottomOf="@id/et_threshold"/>
+    
+        <TextView
+            android:id="@+id/X1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/x1"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:paddingVertical="5dp"
+            android:textAlignment="center"
+            android:background="@drawable/textboxbg"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="75dp"
+            app:layout_constraintTop_toBottomOf="@id/lineBobot"
+            app:layout_constraintStart_toStartOf="@id/lineBobot"/>
+
+        <TextView
+            android:id="@+id/X2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/x2"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:paddingVertical="5dp"
+            android:textAlignment="center"
+            android:background="@drawable/textboxbg"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="45dp"
+            app:layout_constraintTop_toBottomOf="@id/lineThreshold"
+            app:layout_constraintStart_toEndOf="@id/X1"/>
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbg"
+            android:orientation="horizontal"
+            android:padding="10dp"
+
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/X1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_input"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/inputX1_row1"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="72dp"
+                android:background="@drawable/textboxinputorange"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,DuplicateSpeakableTextCheck,LabelFor,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/input2_row1"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="46dp"
+                android:background="@drawable/textboxinputwhite"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbg"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/row1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_input"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/inputX1_row2"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="72dp"
+                android:background="@drawable/textboxinputorange"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/inputX2_row2"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="46dp"
+                android:background="@drawable/textboxinputwhite"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbg"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/row2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_input"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/inputX1_row3"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="72dp"
+                android:background="@drawable/textboxinputorange"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/inputX2_row3"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="46dp"
+                android:background="@drawable/textboxinputwhite"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbg"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/row3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_input"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/inputX1_row4"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="72dp"
+                android:background="@drawable/textboxinputorange"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/inputX2_row4"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="46dp"
+                android:background="@drawable/textboxinputwhite"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="@string/_1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+        </LinearLayout>
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_latih"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/latih"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/row4"
+            android:layout_marginTop="42dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_input"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/orange"
+            android:text="Input"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/row4"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_latih"
+            tools:ignore="HardcodedText" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/reset"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/row4"
+            android:layout_marginTop="42dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintStart_toEndOf="@id/btn_latih"/>
+
+        <View
+            android:id="@+id/liness"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@id/btn_latih"/>
+
+        <TextView
+            android:id="@+id/tv_hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/hasil"
+            android:textColor="@color/orange"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/liness"
+            tools:ignore="TextContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
