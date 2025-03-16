@@ -1,19 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    
+        <TextView
+            android:id="@+id/tv_jst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pelatihan JST"
+            android:textColor="@color/orange"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="48dp"/>
+        
+        <TextView
+            android:id="@+id/tv_mcp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="McCulloch-Pitt"
+            android:textColor="@color/orange"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_jst"
+            android:layout_marginTop="16dp"
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flag"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_mcp"
+            android:layout_marginTop="16dp"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalSv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/tv_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="10dp">
+
+            <!-- Button Group -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="AND"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/white"
+                    android:text="OR"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/white"
+                    android:text="XOR" />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/white"
+                    android:text="NAND"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/white"
+                    android:text="NOR"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="@color/white"
+                    android:text="NOT"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_bobot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bobot"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            app:layout_constraintTop_toBottomOf="@id/horizontalSv"
+            app:layout_constraintEnd_toEndOf="@id/tv_threshold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Threshold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            app:layout_constraintTop_toBottomOf="@id/horizontalSv"
+            app:layout_constraintStart_toStartOf="@id/tv_bobot"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="20dp"
+
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_bobot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:maxLines="2"
+            android:maxWidth="100dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:background="@null"
+            android:paddingTop="8dp"
+            android:paddingBottom="3dp"
+            android:text="X"
+            app:layout_constraintTop_toBottomOf="@id/tv_bobot"
+            app:layout_constraintStart_toStartOf="@id/tv_bobot"
+            app:layout_constraintEnd_toEndOf="@id/tv_bobot"/>
+
+        <EditText
+            android:id="@+id/et_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:maxLines="2"
+            android:maxWidth="100dp"
+            android:text="X"
+            android:paddingTop="8dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/white"
+            android:background="@null"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/tv_threshold"
+            app:layout_constraintStart_toStartOf="@id/tv_threshold"
+            app:layout_constraintEnd_toEndOf="@id/tv_threshold"/>
+        
+        <View
+            android:id="@+id/lineBobot"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            app:layout_constraintStart_toStartOf="@id/et_bobot"
+            app:layout_constraintEnd_toEndOf="@id/et_bobot"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@id/et_bobot"/>
+        <View
+            android:id="@+id/lineThreshold"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            app:layout_constraintStart_toStartOf="@id/et_threshold"
+            app:layout_constraintEnd_toEndOf="@id/et_threshold"
+            android:background="@color/orange"
+            app:layout_constraintTop_toBottomOf="@id/et_threshold"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
