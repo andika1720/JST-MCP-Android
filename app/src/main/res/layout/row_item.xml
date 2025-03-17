@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/textCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:text="Nama"
+        android:gravity="center"
+        android:background="@drawable/bg_table_name"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+
+    <TextView
+        android:id="@+id/textValue1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_table_number"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/_1"
+        android:textColor="@color/white32" />
+    <TextView
+        android:id="@+id/textValue2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_table_number"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/_1"
+        android:textColor="@color/white32" />
+
+    <TextView
+        android:id="@+id/textValue3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_table_number"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/_0"
+        android:textColor="@color/white32" />
+
+    <TextView
+        android:id="@+id/textValue4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_table_number"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/_0"
+        android:textColor="@color/white32" />
+
+
+</LinearLayout>

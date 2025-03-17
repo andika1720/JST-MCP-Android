@@ -245,7 +245,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/data_input"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="center_vertical"/>
@@ -259,7 +259,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,DuplicateSpeakableTextCheck,LabelFor,TouchTargetSizeCheck" />
 
@@ -272,7 +272,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
@@ -294,7 +294,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/data_input"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="center_vertical"/>
@@ -308,7 +308,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
 
@@ -321,7 +321,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
@@ -343,7 +343,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/data_input"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="center_vertical"/>
@@ -357,7 +357,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
 
@@ -370,7 +370,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
@@ -392,7 +392,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/data_input"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="center_vertical"/>
@@ -406,7 +406,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
 
@@ -419,7 +419,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/_1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
@@ -485,5 +485,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/liness"
             tools:ignore="TextContrastCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_hasil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="16dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -18,4 +18,9 @@
     <string name="mcculloch_pitt">McCulloch-Pitt</string>
     <string name="threshold">Threshold</string>
     <string name="_1">1</string>
+    <string name="_0">0</string>
+    <string name="fungsi_logika">Fungsi Logika</string>
+    <string name="nilai_y">Nilai Y</string>
+    <string name="pelatihan">Pelatihan</string>
+    <string name="keluaran">Keluaran</string>
 </resources>
