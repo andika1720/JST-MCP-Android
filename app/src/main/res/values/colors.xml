@@ -7,4 +7,5 @@
     <color name="blue">#344998</color>
     <color name="white32">#DFDFDF</color>
     <color name="bluetable">#7986CB</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

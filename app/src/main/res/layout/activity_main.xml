@@ -73,37 +73,44 @@
                 >
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_and"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textColor="@color/white"
                     android:text="@string/and"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+
                     />
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_or"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
                     android:text="@string/or"/>
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_xor"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
                     android:text="@string/xor" />
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_nand"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
                     android:text="@string/nand"/>
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_nor"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textColor="@color/white"
                     android:text="@string/nor"/>
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_not"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -147,13 +154,13 @@
             android:id="@+id/et_bobot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@null"
             android:maxWidth="100dp"
             android:maxLines="2"
             android:minLines="1"
+            android:maxLength="3"
             android:paddingTop="8dp"
             android:paddingBottom="3dp"
-            android:text="X"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/tv_bobot"
@@ -165,13 +172,13 @@
             android:id="@+id/et_threshold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@null"
             android:maxWidth="100dp"
             android:maxLines="2"
             android:minLines="1"
             android:paddingTop="8dp"
             android:paddingBottom="3dp"
-            android:text="X"
+            android:text=""
+            android:maxLength="3"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/tv_threshold"
@@ -258,20 +265,22 @@
                 android:background="@drawable/textboxinputorange"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:maxLength="2"
+                android:text=""
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,DuplicateSpeakableTextCheck,LabelFor,TouchTargetSizeCheck" />
 
             <EditText
-                android:id="@+id/input2_row1"
+                android:id="@+id/inputX2_row1"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="46dp"
                 android:background="@drawable/textboxinputwhite"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:text=""
+                android:maxLength="2"
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
@@ -307,7 +316,8 @@
                 android:background="@drawable/textboxinputorange"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:text=""
+                android:maxLength="2"
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
@@ -320,7 +330,8 @@
                 android:background="@drawable/textboxinputwhite"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:text=""
+                android:maxLength="2"
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
@@ -356,7 +367,8 @@
                 android:background="@drawable/textboxinputorange"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:text=""
+                android:maxLength="2"
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
@@ -369,7 +381,8 @@
                 android:background="@drawable/textboxinputwhite"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:text=""
+                android:maxLength="2"
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
@@ -405,7 +418,8 @@
                 android:background="@drawable/textboxinputorange"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:text=""
+                android:maxLength="2"
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
@@ -418,7 +432,8 @@
                 android:background="@drawable/textboxinputwhite"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="@string/_1"
+                android:text=""
+                android:maxLength="2"
                 android:textColor="@color/white32"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />

@@ -23,4 +23,19 @@
     <string name="nilai_y">Nilai Y</string>
     <string name="pelatihan">Pelatihan</string>
     <string name="keluaran">Keluaran</string>
+
+
+    <string-array name="table_categories">
+        <item>ID</item>
+        <item>X1</item>
+        <item>X2</item>
+        <item>Fungsi Logika</item>
+        <item>Bobot</item>
+        <item>Threshold</item>
+        <item>Nilai Y</item>
+        <item>Pelatihan</item>
+        <item>Keluaran</item>
+        <item>Hasil</item>
+    </string-array>
+
 </resources>

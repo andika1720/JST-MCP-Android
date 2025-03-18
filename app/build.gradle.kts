@@ -55,7 +55,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.lifecycle.livedata.ktx)
-
+    implementation ("androidx.room:room-ktx:2.6.1")
     implementation(libs.androidx.room.runtime)
     ksp(libs.room.compiler)
 
