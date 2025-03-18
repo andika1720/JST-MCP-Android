@@ -10,7 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="RedundantNamespace,ScrollViewSize">
-    
+
+        <ImageView
+            android:id="@+id/detail"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="8dp"/>
         <TextView
             android:id="@+id/tv_jst"
             android:layout_width="wrap_content"

@@ -2,14 +2,16 @@ package com.example.jstmcpandroid
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.SpannableStringBuilder
 import android.view.View
 import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jstmcpandroid.adapter.TableAdapter
-import com.example.jstmcpandroid.databinding.ActivityMainBinding
 import com.example.jstmcpandroid.data.TableItem
+import com.example.jstmcpandroid.databinding.ActivityMainBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         setupInputFields()
         setUpRV()
         setupActionButtons()
+        binding.detail.setOnClickListener {
+            showAppInfoDialog()
+        }
     }
 
     private fun setupButtonLogic() {
@@ -241,6 +246,27 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    private fun showAppInfoDialog() {
+        val message = SpannableStringBuilder()
+            .append("Selamat datang di aplikasi Mcculloch-Pitt, sebuah proyek kelompok dari kelas R88 untuk memenuhi tugas kelompok mata kuliah Jaringan Saraf Tiruan.\n\n")
+            .append("Kelompok kami yang terdiri dari:\n\n")
+            .append("- Andika Wahyu Saputra (202143502497)\n")
+            .append("- Widhiani Luky Kurniasih (202143502524)\n")
+            .append("- Gina Salma Sabilla (202143502543)\n")
+            .append("- Asep Sutisna (202143502510)\n")
+            .append("- Alfian Sahril mubarok (202143502505)\n")
+            .append("- Dea amelia (202143502551)\n\n")
+            .append("Berusaha mengembangkan aplikasi ini untuk membantu memvisualisasikan dan memahami konsep jaringan saraf tiruan dengan menggunakan model Mcculloch-Pitt.\n\n")
+            .append("Kami berharap aplikasi ini dapat bermanfaat bagi pengguna dan memberikan kontribusi pada bidang jaringan saraf tiruan.")
+
+        AlertDialog.Builder(this)
+            .setTitle("Tentang Aplikasi")
+            .setMessage(message)
+            .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+            .show()
+    }
+
+
 
     companion object {
         private const val NOT = "NOT"
