@@ -12,13 +12,15 @@
         tools:ignore="RedundantNamespace,ScrollViewSize">
 
         <ImageView
-            android:id="@+id/detail"
+            android:id="@+id/infoApp"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/info_app"
             android:src="@drawable/info"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="8dp"/>
+            tools:ignore="ImageContrastCheck" />
         <TextView
             android:id="@+id/tv_jst"
             android:layout_width="wrap_content"
@@ -162,10 +164,11 @@
             android:id="@+id/et_bobot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
             android:maxWidth="100dp"
+            android:maxLength="3"
             android:maxLines="2"
             android:minLines="1"
-            android:maxLength="3"
             android:paddingTop="8dp"
             android:paddingBottom="3dp"
             android:text=""
@@ -174,25 +177,26 @@
             app:layout_constraintEnd_toEndOf="@id/tv_bobot"
             app:layout_constraintStart_toStartOf="@id/tv_bobot"
             app:layout_constraintTop_toBottomOf="@id/tv_bobot"
-            tools:ignore="Autofill,DuplicateSpeakableTextCheck,HardcodedText,LabelFor,TextFields,TouchTargetSizeCheck" />
+            tools:ignore="Autofill,DuplicateSpeakableTextCheck,HardcodedText,LabelFor,TextFields,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <EditText
             android:id="@+id/et_threshold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
             android:maxWidth="100dp"
+            android:maxLength="3"
             android:maxLines="2"
             android:minLines="1"
             android:paddingTop="8dp"
             android:paddingBottom="3dp"
             android:text=""
-            android:maxLength="3"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/tv_threshold"
             app:layout_constraintStart_toStartOf="@id/tv_threshold"
             app:layout_constraintTop_toBottomOf="@id/tv_threshold"
-            tools:ignore="Autofill,HardcodedText,LabelFor,TextFields,TouchTargetSizeCheck" />
+            tools:ignore="Autofill,HardcodedText,LabelFor,TextFields,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         
         <View
             android:id="@+id/lineBobot"
@@ -210,7 +214,7 @@
             app:layout_constraintEnd_toEndOf="@id/et_threshold"
             android:background="@color/orange"
             app:layout_constraintTop_toBottomOf="@id/et_threshold"/>
-    
+
         <TextView
             android:id="@+id/X1"
             android:layout_width="70dp"
@@ -222,9 +226,9 @@
             android:textAlignment="center"
             android:background="@drawable/textboxbg"
             android:layout_marginTop="25dp"
-            android:layout_marginStart="75dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lineBobot"
-            app:layout_constraintStart_toStartOf="@id/lineBobot"/>
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/X2"
@@ -237,17 +241,16 @@
             android:textAlignment="center"
             android:background="@drawable/textboxbg"
             android:layout_marginTop="25dp"
-            android:layout_marginStart="45dp"
+            android:layout_marginStart="25dp"
             app:layout_constraintTop_toBottomOf="@id/lineThreshold"
             app:layout_constraintStart_toEndOf="@id/X1"/>
 
         <LinearLayout
             android:id="@+id/row1"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/inputbg"
             android:orientation="horizontal"
-            android:padding="10dp"
 
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp"
@@ -259,47 +262,55 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/data_input"
                 android:textColor="@color/white32"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:padding="15dp"
+
+                android:layout_marginStart="10dp"
                 android:textStyle="bold"
-                android:gravity="center_vertical"/>
+                tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/inputX1_row1"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="72dp"
-                android:background="@drawable/textboxinputorange"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text=""
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,DuplicateSpeakableTextCheck,LabelFor,TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/inputX2_row1"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="46dp"
-                android:background="@drawable/textboxinputwhite"
-                android:gravity="center"
-                android:inputType="number"
-                android:text=""
-                android:maxLength="2"
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
+        <EditText
+            android:id="@+id/inputX1_row1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@id/X1"
+            app:layout_constraintTop_toTopOf="@id/row1"
+            app:layout_constraintBottom_toBottomOf="@id/row1"
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            tools:ignore="Autofill,DuplicateSpeakableTextCheck,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/inputX2_row1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@id/X2"
+            app:layout_constraintTop_toTopOf="@id/row1"
+            app:layout_constraintBottom_toBottomOf="@id/row1"
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         <LinearLayout
             android:id="@+id/row2"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/inputbg"
             android:orientation="horizontal"
-            android:padding="10dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@id/row1"
@@ -310,47 +321,53 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:text="@string/data_input"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/white32"
-                android:textSize="18sp"
+                android:padding="15dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:gravity="center_vertical"/>
+                tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/inputX1_row2"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="72dp"
-                android:background="@drawable/textboxinputorange"
-                android:gravity="center"
-                android:inputType="number"
-                android:text=""
-                android:maxLength="2"
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/inputX2_row2"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="46dp"
-                android:background="@drawable/textboxinputwhite"
-                android:gravity="center"
-                android:inputType="number"
-                android:text=""
-                android:maxLength="2"
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
+        <EditText
+            android:id="@+id/inputX1_row2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/X1"
+            app:layout_constraintTop_toTopOf="@id/row2"
+            app:layout_constraintBottom_toBottomOf="@id/row2"
+            tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/inputX2_row2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/X2"
+            app:layout_constraintTop_toTopOf="@id/row2"
+            app:layout_constraintBottom_toBottomOf="@id/row2"
+            tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         <LinearLayout
             android:id="@+id/row3"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/inputbg"
             android:orientation="horizontal"
-            android:padding="10dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@id/row2"
@@ -361,47 +378,54 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:text="@string/data_input"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/white32"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:gravity="center_vertical"/>
+                android:padding="15dp"
 
-            <EditText
-                android:id="@+id/inputX1_row3"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="72dp"
-                android:background="@drawable/textboxinputorange"
-                android:gravity="center"
-                android:inputType="number"
-                android:text=""
-                android:maxLength="2"
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
+                tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/inputX2_row3"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="46dp"
-                android:background="@drawable/textboxinputwhite"
-                android:gravity="center"
-                android:inputType="number"
-                android:text=""
-                android:maxLength="2"
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
+        <EditText
+            android:id="@+id/inputX1_row3"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/X1"
+            app:layout_constraintTop_toTopOf="@id/row3"
+            app:layout_constraintBottom_toBottomOf="@id/row3"
+            tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/inputX2_row3"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/X2"
+            app:layout_constraintTop_toTopOf="@id/row3"
+            app:layout_constraintBottom_toBottomOf="@id/row3"
+            tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         <LinearLayout
             android:id="@+id/row4"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/inputbg"
             android:orientation="horizontal"
-            android:padding="10dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@id/row3"
@@ -412,40 +436,48 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:text="@string/data_input"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/white32"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:padding="15dp"
+
                 android:textStyle="bold"
-                android:gravity="center_vertical"/>
+                tools:ignore="TextContrastCheck" />
 
-            <EditText
-                android:id="@+id/inputX1_row4"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="72dp"
-                android:background="@drawable/textboxinputorange"
-                android:gravity="center"
-                android:inputType="number"
-                android:text=""
-                android:maxLength="2"
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/inputX2_row4"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="46dp"
-                android:background="@drawable/textboxinputwhite"
-                android:gravity="center"
-                android:inputType="number"
-                android:text=""
-                android:maxLength="2"
-                android:textColor="@color/white32"
-                android:textSize="16sp"
-                tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
+        <EditText
+            android:id="@+id/inputX1_row4"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/X1"
+            app:layout_constraintTop_toTopOf="@id/row4"
+            app:layout_constraintBottom_toBottomOf="@id/row4"
+            tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/inputX2_row4"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/textboxinputwhite"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text=""
+            android:textColor="@color/white32"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/row4"
+            app:layout_constraintStart_toStartOf="@id/X2"
+            app:layout_constraintTop_toTopOf="@id/row4"
+            tools:ignore="Autofill,LabelFor,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
         
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_latih"
@@ -517,7 +549,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:padding="16dp"/>
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="10dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

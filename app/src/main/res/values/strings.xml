@@ -23,6 +23,8 @@
     <string name="nilai_y">Nilai Y</string>
     <string name="pelatihan">Pelatihan</string>
     <string name="keluaran">Keluaran</string>
+    <string name="info_app">Info App</string>
+    <string name="nama">Nama</string>
 
 
     <string-array name="table_categories">

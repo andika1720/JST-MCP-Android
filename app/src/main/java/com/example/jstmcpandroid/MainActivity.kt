@@ -15,11 +15,9 @@ import com.example.jstmcpandroid.databinding.ActivityMainBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
     private lateinit var tableAdapter: TableAdapter
     private val tableItems = mutableListOf<TableItem>()
-
     private val inputX1Fields = mutableListOf<EditText>()
     private val inputX2Fields = mutableListOf<EditText>()
     private var selectedLogicFunction = "AND"
@@ -33,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setupInputFields()
         setUpRV()
         setupActionButtons()
-        binding.detail.setOnClickListener {
+        binding.infoApp.setOnClickListener {
             showAppInfoDialog()
         }
     }
@@ -47,12 +45,12 @@ class MainActivity : AppCompatActivity() {
         binding.toggleGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (isChecked) {
                 selectedLogicFunction = when (checkedId) {
-                    R.id.btn_and -> "AND"
-                    R.id.btn_or -> "OR"
-                    R.id.btn_xor -> "XOR"
-                    R.id.btn_nand -> "NAND"
-                    R.id.btn_nor -> "NOR"
-                    R.id.btn_not -> "NOT"
+                    R.id.btn_and   -> "AND"
+                    R.id.btn_or    -> "OR"
+                    R.id.btn_xor   -> "XOR"
+                    R.id.btn_nand  -> "NAND"
+                    R.id.btn_nor   -> "NOR"
+                    R.id.btn_not   -> "NOT"
 
                     else -> "AND"
                 }
@@ -254,6 +252,8 @@ class MainActivity : AppCompatActivity() {
             .append("- Widhiani Luky Kurniasih (202143502524)\n")
             .append("- Gina Salma Sabilla (202143502543)\n")
             .append("- Asep Sutisna (202143502510)\n")
+            .append("- Rully Wibowo (202143502528)\n")
+            .append("- Raira Salsabila (202143502548)\n")
             .append("- Alfian Sahril mubarok (202143502505)\n")
             .append("- Dea amelia (202143502551)\n\n")
             .append("Berusaha mengembangkan aplikasi ini untuk membantu memvisualisasikan dan memahami konsep jaringan saraf tiruan dengan menggunakan model Mcculloch-Pitt.\n\n")
